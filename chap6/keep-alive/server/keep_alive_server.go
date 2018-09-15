@@ -25,7 +25,7 @@ func main() {
 		}
 		go func() {
 			defer conn.Close()
-			fmt.Println("Accept %v\n", conn.RemoteAddr())
+			fmt.Println("Accept %V\n", conn.RemoteAddr())
 
 			//Accept後のソケットでなんども応答を返すためにループ
 			for {
