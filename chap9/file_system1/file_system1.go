@@ -44,11 +44,15 @@ func makeDirectory() {
 }
 
 //ディレクトリの削除
+func delete() {
+	os.Remove("teteteteset")
+	os.RemoveAll("test_dir")
+}
 
 func main() {
 	open()
 	read()
 	append()
 	makeDirectory()
-
+	delete()
 }
