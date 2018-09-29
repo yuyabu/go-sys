@@ -26,6 +26,16 @@ func read() {
 	fmt.Println("Read file:")
 	io.Copy(os.Stdout, file)
 }
+
+//追記モードで開く
+func append() {
+	file, err := os.OpenFile("textfile.txt", os.O_RDWR|os.O_APPEND, 0666)
+	if err != nil {
+		panic(err)
+	}
+	io.WriteString(file, "Appended content\n")
+}
+
 func main() {
 	open()
 	read()
