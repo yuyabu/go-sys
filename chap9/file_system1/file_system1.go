@@ -49,10 +49,17 @@ func delete() {
 	os.RemoveAll("test_dir")
 }
 
+//先頭2バイトでファイルを切る
+func truncate() {
+	os.Truncate("textfile.txt", 2)
+
+}
+
 func main() {
 	open()
 	read()
 	append()
 	makeDirectory()
 	delete()
+	truncate()
 }
