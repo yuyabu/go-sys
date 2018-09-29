@@ -36,7 +36,13 @@ func append() {
 	io.WriteString(file, "Appended content\n")
 }
 
+//ディレクトリの作成
+func makeDirectory() {
+	os.MkdirAll("test_dir/test", 0755)
+}
 func main() {
 	open()
 	read()
+	append()
+	makeDirectory()
 }
