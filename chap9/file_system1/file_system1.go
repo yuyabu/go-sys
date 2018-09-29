@@ -38,11 +38,17 @@ func append() {
 
 //ディレクトリの作成
 func makeDirectory() {
+	os.Mkdir("teteteteset", 0755)
 	os.MkdirAll("test_dir/test", 0755)
+
 }
+
+//ディレクトリの削除
+
 func main() {
 	open()
 	read()
 	append()
 	makeDirectory()
+
 }
