@@ -55,6 +55,11 @@ func truncate() {
 
 }
 
+//リネーム
+func rename() {
+	os.Rename("textfile.txt", "newfile.txt")
+}
+
 func main() {
 	open()
 	read()
@@ -62,4 +67,5 @@ func main() {
 	makeDirectory()
 	delete()
 	truncate()
+	rename()
 }
