@@ -35,7 +35,3 @@ func (m *FileLock) Unlock() {
 	}
 	m.l.Unlock()
 }
-
-func main() {
-
-}
