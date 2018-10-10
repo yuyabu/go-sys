@@ -11,10 +11,13 @@ func main() {
 		return
 	}
 	cmd := exec.Command(os.Args[1], os.Args[2:]...)
-	err := cmd.Run()
+
+	result, err := cmd.Output()
 	if err != nil {
 		panic(err)
 	}
+	fmt.Printf("%v\n", string(result))
+
 	state := cmd.ProcessState
 	fmt.Printf("%s \n", state.String())
 	fmt.Printf("  pid: %d\n", state.Pid())
